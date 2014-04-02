@@ -1,0 +1,27 @@
+<h1>Listing secondary_posts</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Userid</th>
+    <th>Extrastuff</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @secondary_posts.each do |secondary_post| %>
+  <tr>
+    <td><%= secondary_post.content %></td>
+    <td><%= secondary_post.userid %></td>
+    <td><%= secondary_post.extrastuff %></td>
+    <td><%= link_to 'Show', secondary_post %></td>
+    <td><%= link_to 'Edit', edit_secondary_post_path(secondary_post) %></td>
+    <td><%= link_to 'Destroy', secondary_post, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Secondary post', new_secondary_post_path %>

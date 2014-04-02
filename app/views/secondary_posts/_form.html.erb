@@ -1,0 +1,29 @@
+<%= form_for(@secondary_post) do |f| %>
+  <% if @secondary_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@secondary_post.errors.count, "error") %> prohibited this secondary_post from being saved:</h2>
+
+      <ul>
+      <% @secondary_post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :userid %><br />
+    <%= f.number_field :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :extrastuff %><br />
+    <%= f.text_field :extrastuff %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @secondary_post.content %>
+</p>
+
+<p>
+  <b>Userid:</b>
+  <%= @secondary_post.userid %>
+</p>
+
+<p>
+  <b>Extrastuff:</b>
+  <%= @secondary_post.extrastuff %>
+</p>
+
+
+<%= link_to 'Edit', edit_secondary_post_path(@secondary_post) %> |
+<%= link_to 'Back', secondary_posts_path %>

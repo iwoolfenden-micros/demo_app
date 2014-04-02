@@ -1,0 +1,2 @@
+module SecondaryPostsHelper
+end
